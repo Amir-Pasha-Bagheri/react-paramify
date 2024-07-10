@@ -4,7 +4,7 @@
   "description": "A package for handling data displaying by using URL parameters",
   "main": "dist/react-paramify.js",
   "publishConfig": {
-    "access": "restricted"
+    "access": "public"
   },
   "scripts": {
     "prepublish": "webpack --mode production"
