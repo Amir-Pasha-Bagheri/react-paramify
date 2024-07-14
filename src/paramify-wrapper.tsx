@@ -9,7 +9,7 @@ const ModalProvider = lazy(() => import('components/modal/ModalProvider'));
 const AlertProvider = lazy(() => import('components/alert/AlertProvider'));
 
 interface ParamifyWrapperProps {
-  children: ReactNode;
+  children: ReactNode | JSX.Element;
   fallback?: ReactNode;
 }
 
@@ -23,7 +23,7 @@ const initialState: InitialParamifyState = {
   },
 };
 
-function ParamifyWrapper(props: ParamifyWrapperProps) {
+export function ParamifyWrapper(props: ParamifyWrapperProps) {
   const [paramify, setParamify] = useState<InitialParamifyState>(initialState);
   const [params] = useParams();
 
@@ -49,5 +49,3 @@ function ParamifyWrapper(props: ParamifyWrapperProps) {
     </ParamifyContext.Provider>
   );
 }
-
-export default ParamifyWrapper;

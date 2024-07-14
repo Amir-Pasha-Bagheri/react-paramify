@@ -1,11 +1,8 @@
-import ParamifyWrapper from './paramify-wrapper';
-
-export default ParamifyWrapper;
+export * from './paramify-wrapper';
 
 // hooks
 export * from './hooks/alert';
 export * from './hooks/modal';
-export * from './hooks/useParams';
 
 // types
 export * from './model/paramify';

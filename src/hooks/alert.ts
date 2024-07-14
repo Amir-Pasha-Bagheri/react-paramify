@@ -71,5 +71,6 @@ export const useAlert = () => {
     items: paramify.alert.items,
     pushAlert: usePushAlert(),
     popAlert: usePopAlert(),
+    popAllAlerts: usePopAllAlerts(),
   };
 };

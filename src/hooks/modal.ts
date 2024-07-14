@@ -71,5 +71,6 @@ export const useModal = () => {
     items: paramify.modal.items,
     pushModal: usePushModal(),
     popModal: usePopModal(),
+    popAllModals: usePopAllModals(),
   };
 };

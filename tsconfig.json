@@ -11,6 +11,10 @@
     "types": ["node"],
     "lib": ["dom", "dom.iterable", "es2020", "scripthost"],
     "plugins": [{ "name": "typescript-plugin-css-modules" }],
+    "declaration": true,
+    "outDir": "dist",
+    "declarationDir": "dist/types",
+    "sourceMap": true,
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -25,6 +29,6 @@
     "noEmit": false,
     "jsx": "react-jsx"
   },
-  "exclude": ["node_modules"],
+  "exclude": ["node_modules", "dist"],
   "include": ["src"]
 }

@@ -1,12 +1,21 @@
 {
   "name": "react-paramify",
-  "version": "0.0.1",
-  "description": "A package for handling data displaying by using URL parameters",
+  "version": "0.0.7",
+  "description": "A React package for handling data displaying by using URL parameters written by TS",
+  "keywords": [
+    "paramify",
+    "params",
+    "modal",
+    "dialog",
+    "alert"
+  ],
   "main": "dist/react-paramify.js",
+  "types": "dist/types",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
+    "clean": "rmdir /s /q dist",
     "prepublish": "webpack --mode production"
   },
   "repository": {
@@ -22,8 +31,12 @@
     "node": ">=7.8.0"
   },
   "files": [
+    "src",
     "dist"
   ],
+  "exports": {
+    ".": "./dist/react-paramify.js"
+  },
   "homepage": "https://github.com/Amir-Pasha-Bagheri/react-paramify#readme",
   "peerDependencies": {
     "react": "18.2.0",
