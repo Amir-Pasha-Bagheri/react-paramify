@@ -13,13 +13,21 @@ React Paramify simply manages the opened UI components ( modals, alerts , ... ) 
 If you are using npm :
 
 ```bash
-npm install react-paramify
+ npm install react-paramify
 ```
 
 using yarn:
 
 ```bash
-yarn add react-paramify
+ yarn add react-paramify
+```
+
+## Dependencies
+
+Following packages are required as dependencies **_temporary_** :
+
+```
+ npm install @mui/material @emotion/react @emotion/styled @mui/icons-material
 ```
 
 ## Usage

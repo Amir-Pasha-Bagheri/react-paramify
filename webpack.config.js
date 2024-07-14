@@ -54,6 +54,10 @@ module.exports = {
       amd: 'ReactDOM',
       root: 'ReactDOM',
     },
+    '@emotion/react': 'emotion-react',
+    '@emotion/styled': 'emotion-styled',
+    '@mui/icons-material': 'mui-icons-material',
+    '@mui/material': 'mui-material',
   },
   devServer: {
     contentBase: path.join(__dirname, 'public'), // Serve files from this directory
