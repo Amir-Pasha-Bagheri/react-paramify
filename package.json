@@ -1,6 +1,6 @@
 {
   "name": "react-paramify",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A React package for handling data displaying by using URL parameters written by TS",
   "keywords": [
     "paramify",
