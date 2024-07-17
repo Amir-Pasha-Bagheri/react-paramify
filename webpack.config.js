@@ -2,10 +2,11 @@ const path = require('path');
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.ts', // Entry point of your application
+  entry: './src/index.ts',
+  mode: 'development',
   output: {
-    filename: 'react-paramify.js', // Output bundle file name
-    path: path.resolve(__dirname, 'dist'), // Output directory
+    filename: 'react-paramify.js',
+    path: path.resolve(__dirname, 'dist'),
     library: 'react-paramify',
     libraryTarget: 'umd',
     publicPath: '/dist/',
@@ -36,32 +37,20 @@ module.exports = {
     alias: {
       react: path.resolve(__dirname, './node_modules/react'),
       'react-dom': path.resolve(__dirname, './node_modules/react-dom'),
+      '@emotion/react': path.resolve(__dirname, './node_modules/@emotion/react'),
+      '@emotion/styled': path.resolve(__dirname, './node_modules/@emotion/styled'),
+      '@mui/icons-material': path.resolve(__dirname, './node_modules/@mui/icons-material'),
+      '@mui/material': path.resolve(__dirname, './node_modules/@mui/material'),
     },
 
     plugins: [new TsconfigPathsPlugin()],
   },
   externals: {
-    // Don't bundle react or react-dom
-    react: {
-      commonjs: 'react',
-      commonjs2: 'react',
-      amd: 'React',
-      root: 'React',
-    },
-    'react-dom': {
-      commonjs: 'react-dom',
-      commonjs2: 'react-dom',
-      amd: 'ReactDOM',
-      root: 'ReactDOM',
-    },
-    '@emotion/react': 'emotion-react',
-    '@emotion/styled': 'emotion-styled',
-    '@mui/icons-material': 'mui-icons-material',
-    '@mui/material': 'mui-material',
-  },
-  devServer: {
-    contentBase: path.join(__dirname, 'public'), // Serve files from this directory
-    port: 3000, // Port for the development server
-    open: true, // Open the default web browser when the server starts
+    react: 'react',
+    'react-dom': 'react-dom',
+    '@emotion/react': '@emotion/react',
+    '@emotion/styled': '@emotion/styled',
+    '@mui/icons-material': '@mui/icons-material',
+    '@mui/material': '@mui/material',
   },
 };
